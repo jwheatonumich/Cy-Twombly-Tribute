@@ -63,13 +63,12 @@ Shrink profile picture if viewport gets too small
         "header header"
         "tribute details"
         "footer details";
-        max-width: 850px;
         /*Semi transparent background so text is easier to read over the bg image*/
         background: rgba(255, 255, 255, 0.25);
     }
  
     /*grid for small viewports, stack content in one column*/
-    @media (max-width: 700px){
+    @media (max-width: 750px){
         #grid{
             display:grid;
             grid-gap: 0px 0px;
@@ -108,7 +107,7 @@ Shrink profile picture if viewport gets too small
     #tribute{
         grid-area:tribute;
         /*Sto wide screens from making lines unreadably long*/
-        max-width: 500px;
+        max-width: 700px;
     }
 
     #portrait{
