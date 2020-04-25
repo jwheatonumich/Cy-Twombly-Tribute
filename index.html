@@ -1,0 +1,200 @@
+<style>
+        /*To do*/
+        /*Add background*/
+        /*Figure out why I can't add a layer inside main outside everything else withogh messing up grid*/
+        /*background-image: url(https://miro.medium.com/max/1400/1*Py4tBsAKUBJoWLzyFcAxPA.jpeg);*/
+
+    #main{
+        display:grid;
+        grid-gap: 0px 10px;
+        grid-template-columns: fr fr;
+        grid-template-rows: fr fr fr;
+        grid-template-areas:
+        "header header"
+        "tribute details"
+        "footer details";
+        max-width: 850px;
+    }
+
+    
+    @media (max-width: 850px){
+        #main{
+            display:grid;
+            grid-gap: 0px 0px;
+            grid-template-columns: fr;
+            grid-template-rows: fr fr fr fr;
+            grid-template-areas:
+            "header"
+            "details"
+            "tribute"
+            "footer";
+        }
+    }
+    
+
+    #header{
+        grid-area: header;
+    }
+
+
+    #title{
+        text-align: center;
+    }
+
+    #quote{
+        text-align: center;
+        font-style: italic;
+    }
+
+    #details{
+        grid-area: details;
+        display:flex;
+        /*Stop the content from arranging itself in a row (default flexbox)*/
+        flex-direction:column;
+        align-items: center;
+
+    }
+
+    #tribute{
+        grid-area:tribute;
+        /*So wide screens don't get unreadably long lines of text*/
+        max-width: 500px;
+    }
+
+
+    #portrait{
+        border: 4px solid black;
+        /*Stop the image from stretching to all available space (default flexbox)*/
+        align-self: start;
+        height: 200px;
+        /*Center the image*/
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #footer{
+        grid-area: footer;
+    }
+</style>
+
+<div id="main">
+        <div id=header>
+            <h1 id="title">
+                Cy Twombly
+            </h1>
+
+            <p id="quote">
+                "Like a fire that consumes all before it."
+            </p>
+        </div>
+
+        <div id="details">
+            <h2>
+                Details
+            </h2>
+
+            <img id="portrait" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Cy_Twombly.jpg/330px-Cy_Twombly.jpg"
+            alt="Headshot of Tolkien">
+
+            <table>
+                <tr>
+                    <th>Born</th>
+                    <th>April 25, 1928</th>
+                </tr>
+
+                <tr>
+                    <th>Died</th>
+                    <th>July 5, 2011  (age 83)</th>
+                </tr>
+
+                <tr>
+                    <th>Occupation</th>
+                    <th>Artist</th>
+                </tr>
+
+                <tr>
+                    <th>Nationality</th>
+                    <th>American</th>
+                </tr>
+
+                <tr>
+                    <th>Known for</th>
+                    <th>Painting<br>
+                    Sculpture<br>
+                Calligraphy</th>
+
+                <tr>
+                    <th>Spouse</th>
+                    <th>Tatiana Franchetti</th>
+                </tr>
+                </tr>
+            </table>
+
+
+        </div>
+
+        <div id="tribute">
+                <div>
+            <h2>
+                Who was Cy Twombly?
+            </h2>
+
+            <p>
+                Edwin Parker "Cy" Twombly Jr. was an American painter, sculptor and photographer. Twombly's works are in the permanent collections of modern art museums globally, including the Menil Collection in Houston, the Tate Modern in London, New York City's Museum of Modern Art and Munich's Museum Brandhorst. He was commissioned for the ceiling at the Musée du Louvre in Paris.
+            </p>
+            </div>
+
+            <h2>
+                Life and Accomplishments
+            </h2>
+
+            <h3>Life and Career</h3>
+            <p>
+                Twombly was born in Lexington, Virginia, on April 25, 1928. Twombly's father, also nicknamed "Cy", pitched for the Chicago White Sox.[5] They were both nicknamed after the baseball great Cy Young who pitched for, among others, the Cardinals, Red Sox, Indians, and Braves.
+            </p>
+
+            <p>
+                In 1952, Twombly received a grant from the Virginia Museum of Fine Arts which enabled him to travel to North Africa, Spain, Italy, and France. He spent this journey in Africa and Europe with Robert Rauschenberg. In 1954, he served in the U.S. Army as a cryptographer in Washington, D.C. and would frequently travel to New York during periods of leave. From 1955 through 1956, he taught at the Southern Seminary and Junior College in Buena Vista, Virginia, currently known as Southern Virginia University; during the summer vacations, Twombly would travel to New York to paint in his Williams Street apartment.
+            </p>
+
+            <p>
+                In 2011, after suffering from cancer for several years, Twombly died in Rome after a brief hospitalization.[12] A plaque in Santa Maria in Vallicella commemorates him. 
+            </p>
+
+            <h3>Work</h3>
+            <p>
+                After his return in 1953, Twombly served in the U.S. army as a cryptologist, an activity that left a distinct mark on his artistic style.[14] From 1955 to 1959, he worked in New York, where he became a prominent figure among a group of artists including Robert Rauschenberg, with whom he was sharing a studio,[15] and Jasper Johns. Exposure to the emerging New York School purged figurative aspects from his work, encouraging a simplified form of abstraction. He became fascinated with tribal art, using the painterly language of the early 1950s to invoke primitivism, reversing the normal evolution of the New York School. Twombly soon developed a technique of gestural drawing that was characterized by thin white lines on a dark canvas that appear to be scratched onto the surface. His early sculptures, assembled from discarded objects, similarly cast their gaze back to Europe and North Africa. 
+            </p>
+
+            <p>
+                Twombly often inscribed on paintings the names of mythological figures during the 1960s.[17] Twombly's move to Gaeta in Southern Italy in 1957 gave him closer contact with classical sources. From 1962 he produced a cycle of works based on myths including Leda and the Swan and The Birth of Venus; myths were frequent themes of Twombly's 1960s work. Between 1960 and 1963 Twombly painted the rape of Leda by the god Zeus/Jupiter in the form of a Swan six times, once in 1960, twice in 1962 and three times in 1963.
+            </p>
+
+            <p>
+                In the mid-1970s, in paintings such as Untitled (1976), Twombly began to evoke landscape through colour (favouring brown, green and light blue), written inscriptions and collage elements.[24] In 1978 he worked on the monumental historical ensemble Fifty Days at Iliam, a ten-part cycle inspired by Homer's Iliad; since then Twombly continued to draw on literature and myth, deploying cryptic pictorial metaphors that situate individual experience within the grand narratives of Western tradition, as in the Gaeta canvases and the monumental Four Seasons concluded in 1994. 
+            </p>
+
+            <h3>Collections</h3>
+
+            <p>
+                In 1989, the Philadelphia Museum of Art opened permanent rooms dedicated to his monumental 10-painting cycle, Fifty Days at Iliam (1978), based on Alexander Pope’s translation of The Iliad.
+            </p>
+
+            <p>
+                The Cy Twombly Pavilion of the Menil Collection in Houston, which was designed by Renzo Piano and opened in 1995, houses more than thirty of Twombly's paintings, sculptures, and works on paper, dating from 1953 to 1994. The Museum Brandhorst in Munich holds 170 works including the Lepanto series. The newly opened Broad Collection in Los Angeles holds 22 works. 
+            </p>
+
+            <p>
+                In 1995, The Four Seasons entered the permanent collection of the Museum of Modern Art as a gift from the artist. A recent (1998–1999) Twombly work, Three Studies from the Temeraire, a triptych, was purchased by the Art Gallery of New South Wales for A$4.5 million in 2004. In 2010, Twombly’s permanent site-specific painting, Ceiling was unveiled in the Salle des Bronzes at the Musée du Louvre; he is only the third artist to have been invited to do so. The other two were Georges Braque in the 1950s and François Morellet in 2010.[35] In 2011, the Museum of Modern Art, New York, made a large acquisition of nine works worth about $75 million.[16] The Bacchus series and five bronze sculptures were gifted by Twombly's estate to Tate Modern in 2014.
+            </p>
+
+            <p>
+                The Art Institute of Chicago hosts an ongoing exhibition, "Cy Twombly: Sculpture Selections, 1948–1995". The exhibition features examples of Twombly's sculptures made between 1948 and 1995, composed primarily of rough elements of wood coated in plaster and white paint.[37] The Institute also holds prints, drawings, and paintings by the artist in its permanent collection.
+            </p>
+
+        </div>
+
+        <div id="footer">
+            Created by James Heaton
+        </div>
+</div>
