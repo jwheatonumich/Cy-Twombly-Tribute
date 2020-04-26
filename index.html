@@ -1,7 +1,6 @@
 <!--
 To do
 Find fonts
-Add spacing gaps outside
 Shrink profile picture if viewport gets too small
 -->
 
@@ -65,6 +64,7 @@ Shrink profile picture if viewport gets too small
         "footer details";
         /*Semi transparent background so text is easier to read over the bg image*/
         background: rgba(255, 255, 255, 0.25);
+        padding:20px;
     }
  
     /*grid for small viewports, stack content in one column*/
@@ -104,20 +104,27 @@ Shrink profile picture if viewport gets too small
 
     }
 
-    #tribute{
+    #tribute-info{
         grid-area:tribute;
         /*Sto wide screens from making lines unreadably long*/
         max-width: 700px;
     }
 
-    #portrait{
+    #image{
         border: 4px solid black;
         /*Stop the image from stretching to all available space (default flexbox)*/
         align-self: start;
-        height: 200px;
+        width: 100%;
+        height: auto;
+        max-width: 500px;
         /*Center the image*/
         margin-left: auto;
         margin-right: auto;
+    }
+
+    #img-caption{
+        text-align: center;
+        font-style: italic;
     }
 
     #footer{
@@ -143,10 +150,11 @@ Shrink profile picture if viewport gets too small
             <h2>
                 Details
             </h2>
-
-            <img id="portrait" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Cy_Twombly.jpg/330px-Cy_Twombly.jpg"
-            alt="Headshot of Tolkien">
-
+            <div id=img-div>
+                <img id="image" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Cy_Twombly.jpg/330px-Cy_Twombly.jpg"
+                alt="Headshot of Tolkien">
+                <p id="img-caption">Twombly in his studio</p>
+            </div>
             <table>
                 <tr>
                     <th>Born</th>
@@ -184,7 +192,7 @@ Shrink profile picture if viewport gets too small
 
         </div>
 
-        <div id="tribute">
+        <div id="tribute-info">
                 <div>
             <h2>
                 Who was Cy Twombly?
@@ -243,6 +251,9 @@ Shrink profile picture if viewport gets too small
                 The Art Institute of Chicago hosts an ongoing exhibition, "Cy Twombly: Sculpture Selections, 1948–1995". The exhibition features examples of Twombly's sculptures made between 1948 and 1995, composed primarily of rough elements of wood coated in plaster and white paint.[37] The Institute also holds prints, drawings, and paintings by the artist in its permanent collection.
             </p>
 
+            <p>
+                For examples of Cy's work see his <a id="tribute-link" target="_blank" href="https://www.theartstory.org/artist/twombly-cy/artworks/">profile page at the The Art Story</a>.
+            </p>
         </div>
 
         <div id="footer">
